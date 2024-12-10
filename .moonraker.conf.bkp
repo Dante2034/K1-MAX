@@ -54,6 +54,12 @@ origin = https://github.com/Guilouz/Creality-Helper-Script.git
 primary_branch = main
 managed_services = klipper
 
+[timelapse]
+output_path = /usr/data/printer_data/timelapse/
+frame_path = /usr/data/printer_data/frames/
+ffmpeg_binary_path = /opt/bin/ffmpeg
+snapshoturl = http://192.168.7.152:4409/?action=snapshot
+
 [update_manager fluidd]
 type = web
 channel = beta
@@ -65,4 +71,11 @@ type = web
 channel = beta
 repo = mainsail-crew/mainsail
 path = /usr/data/mainsail
+
+[update_manager timelapse]
+type = git_repo
+primary_branch = main
+path = ~/moonraker-timelapse
+origin = https://github.com/mainsail-crew/moonraker-timelapse.git
+managed_services = klipper moonraker
 
